@@ -1,12 +1,25 @@
 <script>
+  import { onMount } from "svelte" 
+
+  const end_point = 'https://stoicquotesapi.com/v1/api/quotes/random';  
+  let quote = 'Quote is loading...';
+  let author = 'Justin Pascual' 
+  
+  onMount(async function() { 
+    const response = await fetch(end_point); 
+    const data = await response.json();
+    
+    quote = data.body
+    author = data.author
+  })
 
 </script>
 
 <main class="w-full h-screen ">
   <div class="container mx-auto flex items-center justify-center h-full">
     <div class="max-w-[1000px] flex flex-col gap-10">
-      <h2 class="font-primary text-7xl ">Hello, World!</h2>
-      <p class="text-left block w-full font-secondary">— Unknown</p>
+      <h2 class="font-primary text-5xl leading-snug">{ quote }</h2>
+      <p class="text-left block w-full font-secondary">— {author}</p>
     </div>
   </div>
 </main>
