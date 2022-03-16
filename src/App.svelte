@@ -15,12 +15,12 @@
 </script>
 
 <main class="w-full h-screen">
-  <div class="container mx-auto flex items-center justify-center h-full">
+  <div class="container mx-auto flex items-center justify-center h-full px-4">
     <div class="max-w-[1000px] flex flex-col gap-10">
       {#if quote == undefined}
-        <h2 class="font-primary text-5xl leading-snug">Loading...</h2>
+        <h2 class="font-primary text-2xl md:text-5xl leading-snug">Loading...</h2>
       {:else}
-         <h2 class="font-primary text-5xl leading-snug font-[500]">{ quote }</h2>
+         <h2 class="font-primary text-2xl md:text-5xl md:leading-tight font-[500]">{ quote }</h2>
         <p class="text-left block w-full font-secondary">— {author}</p>
       {/if}
     </div>
