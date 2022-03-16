@@ -2,8 +2,7 @@
   import { onMount } from "svelte" 
 
   const end_point = 'https://stoicquotesapi.com/v1/api/quotes/random';  
-  let quote = 'Quote is loading...';
-  let author = 'Justin Pascual' 
+  let quote, author = null;
   
   onMount(async function() { 
     const response = await fetch(end_point); 
@@ -18,8 +17,12 @@
 <main class="w-full h-screen ">
   <div class="container mx-auto flex items-center justify-center h-full">
     <div class="max-w-[1000px] flex flex-col gap-10">
-      <h2 class="font-primary text-5xl leading-snug">{ quote }</h2>
-      <p class="text-left block w-full font-secondary">— {author}</p>
+      {#if quote == undefined}
+        <h2 class="font-primary text-5xl leading-snug">Loading...</h2>
+      {:else}
+         <h2 class="font-primary text-5xl leading-snug font-[500]">{ quote }</h2>
+        <p class="text-left block w-full font-secondary">— {author}</p>
+      {/if}
     </div>
   </div>
 </main>
