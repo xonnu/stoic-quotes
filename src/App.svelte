@@ -14,7 +14,7 @@
 
 </script>
 
-<main class="w-full h-screen ">
+<main class="w-full h-screen">
   <div class="container mx-auto flex items-center justify-center h-full">
     <div class="max-w-[1000px] flex flex-col gap-10">
       {#if quote == undefined}
