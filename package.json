@@ -1,11 +1,11 @@
 {
-  "name": "chrono-svelte-template",
+  "name": "stoic-quotes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "config": {
     "dist": "dist",
-    "domain": "chrono-svelte-template"
+    "domain": "stoic-quotes"
   },
   "scripts": {
     "dev": "vite",
