@@ -28,7 +28,7 @@
 </main>
 
 <footer class="absolute bottom-0 w-full">
-  <p class="text-gray-300 font-secondary text-sm p-4 text-center block w-full ">Created by <a class="underline underline-offset-2 decoration-2" href="http://github.com/heychrono" target="_blank" rel="noopener noreferrer">Chrono</a></p>
+  <p class="text-gray-300 font-secondary text-sm p-4 text-center block w-full ">Created by <a class="underline underline-offset-2 decoration-2" href="http://github.com/devkurono" target="_blank" rel="noopener noreferrer">Kurono</a></p>
 </footer>
 
 <style>
